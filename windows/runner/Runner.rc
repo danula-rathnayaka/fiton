@@ -89,11 +89,12 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "edu.icet.fiton" "\0"
+                VALUE
+"CompanyName", "edu.icet.mobile.fiton" "\0"
             VALUE "FileDescription", "fiton" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "fiton" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 edu.icet.fiton. All rights reserved." "\0"
+VALUE "LegalCopyright", "Copyright (C) 2025 edu.icet.mobile.fiton. All rights reserved." "\0"
             VALUE "OriginalFilename", "fiton.exe" "\0"
             VALUE "ProductName", "fiton" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

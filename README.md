@@ -1,6 +1,6 @@
 # fiton
 
-Mobile application for FitOn Project
+FitOn Mobile Application
 
 ## Getting Started
 
