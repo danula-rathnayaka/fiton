@@ -28,10 +28,14 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
 
   @override
   Widget build(BuildContext context) {
+    const textBlackDark = Colors.black87;
+    const textBlackLight = Colors.black54;
+
     return Scaffold(
-      backgroundColor: const Color(0xfffafafa),
+      backgroundColor: const Color(0xfffafafa), // White Background
       drawer: const Drawer(),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         actions: [
           IconButton(
               onPressed: () {
@@ -51,14 +55,17 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
               },
               icon: const Icon(Icons.camera_front, color: Colors.grey))
         ],
-        iconTheme: const IconThemeData(color: Colors.black87),
-        centerTitle: true,
-        title: const Text(
-          "QR Scanner",
-          style: TextStyle(
-              color: Colors.black87,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1),
+        iconTheme: const IconThemeData(color: textBlackDark),
+        // Dark black color
+        title: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15.0),
+          child: Text(
+            "QR Scanner",
+            style: TextStyle(
+                color: textBlackDark,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1),
+          ),
         ),
       ),
       body: Container(
@@ -73,7 +80,7 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
                 Text(
                   "Place the QR code in the area.",
                   style: TextStyle(
-                      color: Colors.black87,
+                      color: textBlackDark,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1),
@@ -81,7 +88,7 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
                 SizedBox(height: 10),
                 Text(
                   "Scanning will be started automatically.",
-                  style: TextStyle(fontSize: 16, color: Colors.black54),
+                  style: TextStyle(fontSize: 16, color: textBlackLight),
                 )
               ],
             )),
@@ -115,13 +122,27 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
                 )),
             Expanded(
                 child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 50),
                     alignment: Alignment.center,
-                    child: const Text(
-                      "Developed by Fit On.",
-                      style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 14,
-                          letterSpacing: 1),
+                    child: const Center(
+                      child: Column(
+                        children: [
+                          Text(
+                            "Check for a QR code in the item you picked.",
+                            style: TextStyle(
+                                color: textBlackDark,
+                                fontSize: 14,
+                                letterSpacing: 1),
+                          ),
+                          Text(
+                            "You will be able to check it on virtually.",
+                            style: TextStyle(
+                                color: textBlackDark,
+                                fontSize: 14,
+                                letterSpacing: 1),
+                          )
+                        ],
+                      ),
                     ))),
           ],
         ),
